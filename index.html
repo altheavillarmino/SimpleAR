@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Halloween AR Hunt</title>
+    <title>Hustisya Hunt</title>
 
     <!-- A-Frame -->
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
@@ -44,25 +44,37 @@
         renderer="logarithmicDepthBuffer: true;"
         vr-mode-ui="enabled: false">
 
+        <!-- Assets -->
+        <a-assets>
+            <img id="mumu" src="assets/mumu.png">
+        </a-assets>
+
+
         <!-- The marker -->
         <a-marker preset="hiro">
 
             <!-- Ghost -->
-            <a-text
-                value="👻"
-                align="center"
-                color="white"
-                scale="3 3 3"
-                position="0 0 0">
-            </a-text>
+            <a-image
+                src="#mumu"
+                position="0 0.8 0"
+                width="1.5"
+                height="1.5"
+                animation="property: position; 
+                dir: alternate; 
+                dur: 1000; 
+                loop: true; 
+                to: 0 1.1 0">
+                
+            </a-image>
 
             <!-- Floating text -->
             <a-text
-                value="GHOST FOUND!"
+                value="PENGE PO NG HUSTISYA!!!"
                 align="center"
                 color="#ff0000"
                 scale="1.5 1.5 1.5"
                 position="0 1 0">
+                
             </a-text>
 
         </a-marker>
