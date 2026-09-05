@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Halloween AR Hunt</title>
+
+    <!-- A-Frame -->
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+
+    <!-- AR.js -->
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.5/aframe/build/aframe-ar.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #message {
+            position: fixed;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 28px;
+            font-weight: bold;
+            z-index: 10;
+            text-shadow: 2px 2px 5px black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="message">
+        🎃 FIND THE GHOST 👻
+    </div>
+
+    <a-scene
+        embedded
+        arjs="sourceType: webcam; debugUIEnabled: false;"
+        renderer="logarithmicDepthBuffer: true;"
+        vr-mode-ui="enabled: false">
+
+        <!-- The marker -->
+        <a-marker preset="hiro">
+
+            <!-- Ghost -->
+            <a-text
+                value="👻"
+                align="center"
+                color="white"
+                scale="3 3 3"
+                position="0 0 0">
+            </a-text>
+
+            <!-- Floating text -->
+            <a-text
+                value="GHOST FOUND!"
+                align="center"
+                color="#ff0000"
+                scale="1.5 1.5 1.5"
+                position="0 1 0">
+            </a-text>
+
+        </a-marker>
+
+        <!-- Camera -->
+        <a-entity camera></a-entity>
+
+    </a-scene>
+
+</body>
+</html>
