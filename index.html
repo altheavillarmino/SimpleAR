@@ -50,11 +50,11 @@
 <body>
 
     <div id="message">
-        THEY ARE HERE 👀 FIND THE MUMU
+        👀 FIND THE MUMU 😱
     </div>
 
     <div id="score">
-    👻 Ghosts Found: 0 / 3
+        Ghosts Found: 0 / 3
     </div>
 
     <a-scene
@@ -75,6 +75,7 @@
             <!-- Ghost 1-->
             <a-image
                 id="ghost1"
+                class="clickable"
                 src="#mumu"
                 position="0 1.5 0"
                 width="8"
@@ -90,6 +91,7 @@
              <!-- Ghost 2 -->
                 <a-image
                     id="ghost2"
+                    class="clickable"
                     src="#mumu"
                     position="0 1.5 -2"
                     width="3"
@@ -100,6 +102,7 @@
                 <!-- Ghost 3 -->
                 <a-image
                     id="ghost3"
+                    class="clickable"
                     src="#mumu"
                     position="2 1.5 0"
                     width="5"
@@ -122,7 +125,12 @@
         </a-marker>
 
         <!-- Camera -->
-        <a-entity camera></a-entity>
+        <a-entity camera>
+            <a-cursor
+                raycaster="objects: .clickable"
+                fuse="false">
+            </a-cursor>
+        </a-entity>
 
     </a-scene>
 
