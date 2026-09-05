@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Hustisya Hunt</title>
+    <title>Halloween AR Hunt</title>
 
     <!-- A-Frame -->
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
@@ -56,25 +56,24 @@
             <!-- Ghost -->
             <a-image
                 src="#mumu"
-                position="0 0.8 0"
+                position="0 1 0"
                 width="1.5"
                 height="1.5"
-                animation="property: position; 
-                dir: alternate; 
-                dur: 1000; 
-                loop: true; 
-                to: 0 1.1 0">
-                
+                rotation="-90 0 0"
+                animation="property: position;
+                        dir: alternate;
+                        dur: 1000;
+                        loop: true;
+                        to: 0 1.3 0">
             </a-image>
 
             <!-- Floating text -->
             <a-text
-                value="PENGE PO NG HUSTISYA!!!"
+                value="PAHINGI PO NG HUSTISYA!!!"
                 align="center"
                 color="#ff0000"
                 scale="1.5 1.5 1.5"
-                position="0 1 0">
-                
+                position="0 2.3 0">
             </a-text>
 
         </a-marker>
